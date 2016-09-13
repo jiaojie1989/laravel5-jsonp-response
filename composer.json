@@ -1,0 +1,15 @@
+{
+    "name": "jiaojie/laravel5-jsonp-response",
+    "description": "Jsonp Response for Laravel Framework 5.x",
+    "type": "library",
+    "require": {
+        "laravel/framework": "~5.0"
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "JIAO Jie",
+            "email": "thomasjiao@vip.qq.com"
+        }
+    ]
+}

@@ -3,6 +3,7 @@
     "description": "Jsonp Response for Laravel Framework 5.x",
     "type": "library",
     "require": {
+        "php": ">=5.4.0",
         "laravel/framework": "~5.0"
     },
     "license": "MIT",
@@ -11,5 +12,10 @@
             "name": "JIAO Jie",
             "email": "thomasjiao@vip.qq.com"
         }
-    ]
+    ],
+    "autoload": {
+        "psr-4": {
+            "Jiaojie\\Laravel\\Middlewares\\Jsonp\\": "src/Jsonp"
+        }
+    }
 }

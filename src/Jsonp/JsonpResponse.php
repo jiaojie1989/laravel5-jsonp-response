@@ -15,6 +15,7 @@ namespace Jiaojie\Laravel\Middlewares\Jsonp;
 
 use Response;
 use Input;
+use Closure;
 
 /**
  * Description of JsonpResponse

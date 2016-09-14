@@ -36,9 +36,15 @@ class JsonpResponse {
      * @return mixed
      */
     public function handle($request, Closure $next) {
+        $callback = $request->query->get("callback");
+        $jsonp = $request->query->get("__jsonp");
+        if ($callback && $jsonp) {
+            $request->query->remove("__jsonp");
+            $request->query->remove("callback");
+        }
         $response = $next($request);
-        if (Input::get('callback') && Input::get("jsonp")) {
-            return Response::json($response->getOriginalContent())->setCallback(Input::get('callback'));
+        if ($callback && $jsonp) {
+            return Response::json($response->getOriginalContent())->setCallback($callback);
         } else {
             return $response;
         }

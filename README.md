@@ -6,6 +6,9 @@ Jsonp Response Format for Laravel Framework 5.x
 - Laravel >= 5.0
 
 ## Usage
+- Install
+Simply run `composer install "jiaojie/laravel5-jsonp-response"`.
+
 - Add the following middleare to your `app\Http\Kernel.php` 
 ```php
     protected $middleware = [

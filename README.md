@@ -20,3 +20,6 @@ Simply run `composer install "jiaojie/laravel5-jsonp-response"`.
 ```javascript
 /**/myCallback(["date","2016-09-13 19:15:07"]);
 ```
+
+## Notice
+- If param `callback` is set to a number, then the javascript callback function is forced to be named `callback`.

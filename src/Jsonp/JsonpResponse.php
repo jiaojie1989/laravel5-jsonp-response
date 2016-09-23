@@ -44,6 +44,9 @@ class JsonpResponse {
         }
         $response = $next($request);
         if ($callback && $jsonp) {
+            if (is_numeric($callback)) {
+                $callback = "callback";
+            }
             return Response::json($response->getOriginalContent())->setCallback($callback);
         } else {
             return $response;
